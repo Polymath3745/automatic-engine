@@ -1,19 +1,5 @@
-# [file path to file] [mode]
-# r - read
-# w - write
-# a - append
-# r+ - read and write
+import useful_tools
 
-employee_file = open("names.txt", "r")
-for employee in employee_file.readlines():
-    for letter in employee:
-        print(letter)
+#importing funcitonality from external files is huge in python
 
-#print(employee_file.readlines())
-
-employee_file = open("names.txt", "a")
-names = ["Mike", "Julia", "Thomas"]
-for idx in range(len(names)):
-    employee_file.write("\n" + names[idx] + " - Human Resources")
-
-employee_file.close()
+print(useful_tools.roll_dice(10))
