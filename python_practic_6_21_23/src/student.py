@@ -5,3 +5,6 @@ class Student:
         self.m_major = major
         self.m_gpa = gpa
         self.m_is_on_probation = is_on_probation
+
+    def disp_name(self):
+        print(self.m_name)
