@@ -1,7 +1,7 @@
 from chef import Chef
 
 class ChineseChef(Chef):
-
+    #This overrides the similar function from Chef class
     def make_special_dish(self):
         print("The chef makes orange chicken")
 
