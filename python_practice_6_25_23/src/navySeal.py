@@ -5,7 +5,7 @@ class NavySeal(Soldier):
         super().__init__(name, id, birthday, rank, rank_value)
         self.m_specialization = specialization
 
-    def war_cry():
+    def war_cry(self):
         print("The Only Easy Day Was Yesterday!")
 
     def get_specialization(self):

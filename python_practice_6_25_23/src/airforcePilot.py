@@ -5,7 +5,7 @@ class AirforcePilot(Soldier):
         super().__init__(name, id, birthday, rank, rank_value)
         self.m_aircraft = aircraft
 
-    def war_cry():
+    def war_cry(self):
         print("Aim High ... Fly-Fight-Win!")
 
     def get_aircraft(self):
