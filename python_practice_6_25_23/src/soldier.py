@@ -1,13 +1,11 @@
-# Parent class
 class Soldier:
-    def __init__(self, name, id, birthday, rank):
+    def __init__(self, name, id, birthday, rank, rank_value):
         self.m_name = name
         self.m_id = id
         self.m_birthday = birthday
         self.m_rank = rank
+        self.m_rank_value = rank_value
 
-    
-    # getters
     def get_name(self):
         return self.m_name
     
@@ -20,8 +18,6 @@ class Soldier:
     def get_rank(self):
         return self.m_rank
     
-
-    # setters
     def set_name(self, name):
         self.m_name = name
 
@@ -34,16 +30,10 @@ class Soldier:
     def set_rank(self, rank):
         self.m_rank = rank
 
-    # This function takes in the rank of the calling soldier and the comparison one
-    # it then uses the values dict function to grab the rank value
-    # passes this to the list function which then grabs it as a integer and compares
-    # to the rank value of the other soldier
-
     def seniority(self, other_soldier):
-        if(list(self.m_rank.values())[0] > list(other_soldier.m_rank.values())[0]):
+        if self.m_rank_value > other_soldier.m_rank_value:
             print(self.m_name + " is a higher rank than " + other_soldier.m_name)
-            print(self.m_name + " is a " + list(self.m_rank.keys())[0])
-            print(other_soldier.m_name + " is a " + list(other_soldier.m_rank.keys())[0])
-
+            print(self.m_name + " is a " + self.m_rank)
+            print(other_soldier.m_name + " is a " + other_soldier.m_rank)
         else:
             print(other_soldier.m_name + " is a higher rank than " + self.m_name)
